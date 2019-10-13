@@ -4,10 +4,10 @@ __Data__: 671 797 CT scans of brains
 
 __Task__: predict whether a hemorrhage exists in a given image, and what type it is
 
-__Evaluation__: weighted multi-label logarithmic loss
+__Evaluation__: Weighted Multi-label Logarithmic Loss
 
 __Solution__: 2D-CNN with EfficientNetB0 base
 
-__Success__: 
+__Success__: 0.089 Weighted Mean Column-wise Log Loss
 
 ![](images.png)
