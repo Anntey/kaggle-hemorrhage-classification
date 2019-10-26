@@ -101,11 +101,12 @@ val_gen = DataLoader(val_dataset, batch_size)
 ##################
 
 imgs, _ = next(iter(val_gen))
+imgs = imgs.numpy().transpose(0, 2, 3, 1) # reshape (n, ch, h, w) to (n, h, w, ch)
 
 fig = plt.figure(figsize = (11, 5))
 for i in range(18):
     plt.subplot(3, 6, i + 1)
-    img = np.transpose(imgs[i].numpy(), (1, 2, 0))[:, :, 0] # reshape (ch, h, w) to (h, w, ch) and select 1 ch
+    img = imgs[i, :, :, 0] # select first channel
     plt.imshow(img, cmap = "bone")
     plt.axis("off")
 plt.tight_layout() 
