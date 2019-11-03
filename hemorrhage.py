@@ -120,6 +120,7 @@ device = torch.device("cuda:0")
 n_classes = 6
  
 class EfficientNetB0(nn.Module):
+        
     def __init__(self):
         super(EfficientNetB0, self).__init__()
         self.model = EfficientNet.from_pretrained("efficientnet-b0") 
