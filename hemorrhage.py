@@ -51,8 +51,7 @@ train_df, val_df = train_test_split(
 # Data Generators #
 ###################
 
-class HemorrhageDataset(Dataset):
-    
+class HemorrhageDataset(Dataset):    
     def __init__(self, df, img_path, labels = True, augmentations = None):    
         self.df = df
         self.img_path = img_path
@@ -119,8 +118,7 @@ device = torch.device("cuda:0")
 
 n_classes = 6
  
-class EfficientNetB0(nn.Module):
-        
+class EfficientNetB0(nn.Module):        
     def __init__(self):
         super(EfficientNetB0, self).__init__()
         self.model = EfficientNet.from_pretrained("efficientnet-b0") 
