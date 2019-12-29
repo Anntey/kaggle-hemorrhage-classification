@@ -2,7 +2,7 @@
 
 __Data__: 671 797 CT scans of brains
 
-__Task__: predict whether a hemorrhage exists in an image and what type it is
+__Task__: predict what types (multilabel) of hemorrhage are present in an image and if so 
 
 __Evaluation__: Weighted Multi-label Logarithmic Loss
 
